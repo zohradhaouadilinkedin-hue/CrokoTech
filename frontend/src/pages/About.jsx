@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { CheckCircle2, ArrowRight, Server, ShieldCheck, Cloud, Cpu, Code2, Network } from "lucide-react";
+import { CheckCircle2, ArrowRight, Server, ShieldCheck, Cloud, Cpu, Code2, Network, Linkedin } from "lucide-react";
 import Reveal from "../components/Reveal";
 import Croco from "../components/Croco";
 import { PageHero } from "./Prestations";
@@ -47,6 +47,9 @@ export default function About() {
             ))}
           </div>
           <Link to="/contact"><Button size="lg" className="mt-8 bg-[#0f7a4d] hover:bg-[#0b5f3c] text-white rounded-full px-8 h-12">Travaillons ensemble <ArrowRight size={18} className="ml-1" /></Button></Link>
+          <a href={company.linkedin} target="_blank" rel="noopener noreferrer" className="mt-8 ml-3 inline-flex items-center gap-2 rounded-full border border-[#0A66C2]/30 bg-[#0A66C2]/5 text-[#0A66C2] font-medium px-6 h-12 hover:bg-[#0A66C2]/10 transition-colors align-middle">
+            <Linkedin size={18} /> {company.linkedinLabel}
+          </a>
         </Reveal>
       </section>
 

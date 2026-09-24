@@ -9,6 +9,8 @@ export const company = {
   founder: "Corentin Leriche",
   location: "Nantes & tout le 44",
   yearsExp: 5,
+  linkedin: "https://fr.linkedin.com/in/corentin-leriche",
+  linkedinLabel: "Corentin Leriche \u2013 MADIC group",
 };
 
 export const heroImage =

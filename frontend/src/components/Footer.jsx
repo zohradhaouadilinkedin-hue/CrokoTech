@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Linkedin } from "lucide-react";
 import Croco from "./Croco";
 import { company, entrepriseServices, particulierServices } from "../mock";
 
@@ -49,6 +49,11 @@ export default function Footer() {
             <li className="flex items-center gap-2"><Mail size={16} className="text-[#22c55e]" /> <a href={`mailto:${company.email}`} className="hover:text-white break-all">{company.email}</a></li>
             <li className="flex items-center gap-2"><MapPin size={16} className="text-[#22c55e]" /> {company.location}</li>
             <li className="flex items-center gap-2"><Clock size={16} className="text-[#22c55e]" /> Lun – Sam, 8h – 20h</li>
+            <li className="pt-1">
+              <a href={company.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors px-4 py-2 text-white">
+                <Linkedin size={16} className="text-[#22c55e]" /> LinkedIn
+              </a>
+            </li>
           </ul>
         </div>
       </div>
