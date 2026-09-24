@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Server, Cpu, Network, Cable, Settings2, ShieldCheck, Handshake, LifeBuoy, Activity, DatabaseBackup, RefreshCw, Phone, Cctv, Code2, Headset, Wrench } from "lucide-react";
+import { ArrowRight, Server, Cpu, Network, Cable, Settings2, ShieldCheck, Handshake, LifeBuoy, Activity, DatabaseBackup, RefreshCw, Phone, Cctv, Code2, Headset, Wrench, GraduationCap } from "lucide-react";
 
 const ICONS = {
   Server, Cpu, Network, Cable, Settings2, ShieldCheck, Handshake, LifeBuoy,
-  Activity, DatabaseBackup, RefreshCw, Phone, Cctv, Code2, Headset, Wrench,
+  Activity, DatabaseBackup, RefreshCw, Phone, Cctv, Code2, Headset, Wrench, GraduationCap,
 };
 
 export function ServiceIcon({ name, size = 24, className = "" }) {

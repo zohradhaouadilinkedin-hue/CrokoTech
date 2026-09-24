@@ -349,6 +349,24 @@ export const services = [
       "Récupération de données",
     ],
   },
+  {
+    slug: "formation-informatique",
+    title: "Formation informatique",
+    short: "Des formations adaptées et personnalisées selon vos besoins.",
+    icon: "GraduationCap",
+    image: IMG.webdev2,
+    category: ["entreprise", "particulier"],
+    intro:
+      "Montez en compétences à votre rythme ! CrokoTech propose des formations informatiques sur mesure, adaptées et personnalisées selon vos besoins réels — que vous soyez débutant curieux ou équipe à faire monter en puissance.",
+    features: [
+      "Programme personnalisé selon vos objectifs",
+      "Tous niveaux : débutant à confirmé",
+      "Bureautique, cybersécurité, systèmes & réseaux",
+      "Sessions en présentiel ou à distance",
+      "Sensibilisation des équipes à la sécurité",
+      "Rythme et supports adaptés à chacun",
+    ],
+  },
 ];
 
 export const getService = (slug) => services.find((s) => s.slug === slug);
