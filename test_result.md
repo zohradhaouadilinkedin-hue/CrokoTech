@@ -101,3 +101,72 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: "Test the CrokoTech website bug fix - verify removal of 'Lun – Sam, 8h – 20h' text and presence of LinkedIn links"
+
+frontend:
+  - task: "Remove opening hours text from footer"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/Footer.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "testing"
+          comment: "✅ VERIFIED: Opening hours text 'Lun – Sam, 8h – 20h' successfully removed from footer. Footer now only shows Phone, Email, Location, and LinkedIn link. No traces of opening hours found."
+  
+  - task: "Remove Disponibilité card with opening hours from contact page"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Contact.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "testing"
+          comment: "✅ VERIFIED: 'Disponibilité' card and opening hours text 'Lun – Sam, 8h – 20h' successfully removed from contact page. Only 3 contact info cards remain: Téléphone, Email, Zone d'intervention (plus map)."
+  
+  - task: "Add LinkedIn link to footer"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/Footer.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "testing"
+          comment: "✅ VERIFIED: LinkedIn link present in footer with correct URL 'https://fr.linkedin.com/in/corentin-leriche' and text 'LinkedIn'."
+  
+  - task: "Add LinkedIn button to about page"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/About.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "testing"
+          comment: "✅ VERIFIED: LinkedIn button present on about page with correct text 'Corentin Leriche – MADIC group' and correct URL 'https://fr.linkedin.com/in/corentin-leriche'."
+
+metadata:
+  created_by: "testing_agent"
+  version: "1.0"
+  test_sequence: 1
+  run_ui: true
+  test_date: "2026-09-24"
+
+test_plan:
+  current_focus:
+    - "All tasks completed and verified"
+  stuck_tasks: []
+  test_all: true
+  test_priority: "high_first"
+
+agent_communication:
+    - agent: "testing"
+      message: "Bug fix verification completed successfully. All requirements met: (1) Opening hours text 'Lun – Sam, 8h – 20h' completely removed from footer and contact page, (2) LinkedIn links present with correct URL in footer and about page, (3) All pages load without errors, (4) No console errors detected. The website is working as expected."

@@ -48,7 +48,6 @@ export default function Footer() {
             <li className="flex items-center gap-2"><Phone size={16} className="text-[#22c55e]" /> <a href={`tel:${company.phone.replace(/\s/g, "")}`} className="hover:text-white">{company.phone}</a></li>
             <li className="flex items-center gap-2"><Mail size={16} className="text-[#22c55e]" /> <a href={`mailto:${company.email}`} className="hover:text-white break-all">{company.email}</a></li>
             <li className="flex items-center gap-2"><MapPin size={16} className="text-[#22c55e]" /> {company.location}</li>
-            <li className="flex items-center gap-2"><Clock size={16} className="text-[#22c55e]" /> Lun – Sam, 8h – 20h</li>
             <li className="pt-1">
               <a href={company.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors px-4 py-2 text-white">
                 <Linkedin size={16} className="text-[#22c55e]" /> LinkedIn

@@ -50,7 +50,6 @@ export default function Contact() {
           <ContactItem icon={Phone} label="Téléphone" value={company.phone} href={`tel:${company.phone.replace(/\s/g, "")}`} />
           <ContactItem icon={Mail} label="Email" value={company.email} href={`mailto:${company.email}`} />
           <ContactItem icon={MapPin} label="Zone d'intervention" value={`${company.location} — déplacements gratuits`} />
-          <ContactItem icon={Clock} label="Disponibilité" value="Lun – Sam, 8h – 20h" />
           <div className="rounded-2xl overflow-hidden border border-border shadow-sm mt-4">
             <iframe
               title="Carte Nantes"
