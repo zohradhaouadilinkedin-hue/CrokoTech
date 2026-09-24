@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Phone, Mail, Menu, X, ChevronDown } from "lucide-react";
 import Croco from "./Croco";
+import { ServiceIcon } from "./ServiceCard";
 import { company, entrepriseServices, particulierServices } from "../mock";
 import { Button } from "./ui/button";
 
@@ -105,18 +106,28 @@ export default function Header() {
 }
 
 function NavDropdown({ label, to, items, isActive }) {
+  const cols = items.length > 8 ? "grid-cols-2" : "grid-cols-2";
+  const width = items.length > 8 ? "w-[620px]" : "w-[440px]";
   return (
     <div className="relative group">
       <Link to={to} className={`${navBase} inline-flex items-center gap-1 ${isActive ? "text-[#0f7a4d]" : "text-slate-700 hover:text-[#0f7a4d] hover:bg-secondary"}`}>
         {label} <ChevronDown size={15} className="transition-transform duration-300 group-hover:rotate-180" />
       </Link>
-      <div className="absolute left-0 top-full pt-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
-        <div className="w-64 bg-white rounded-xl shadow-xl border border-border p-2 max-h-[70vh] overflow-y-auto">
-          {items.map((s) => (
-            <Link key={s.slug} to={`/service/${s.slug}`} className="block px-3 py-2 rounded-lg text-sm text-slate-700 hover:bg-secondary hover:text-[#0f7a4d] transition-colors">
-              {s.title}
-            </Link>
-          ))}
+      <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
+        <div className={`${width} max-w-[90vw] bg-white rounded-2xl shadow-2xl border border-border p-3`}>
+          <div className={`grid ${cols} gap-1`}>
+            {items.map((s) => (
+              <Link key={s.slug} to={`/service/${s.slug}`} className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-sm text-slate-700 hover:bg-secondary hover:text-[#0f7a4d] transition-colors">
+                <span className="w-8 h-8 rounded-lg bg-secondary group-hover:bg-white flex items-center justify-center text-[#0f7a4d] shrink-0">
+                  <ServiceIcon name={s.icon} size={16} />
+                </span>
+                <span className="leading-tight">{s.title}</span>
+              </Link>
+            ))}
+          </div>
+          <Link to={to} className="mt-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-sm font-medium text-white croco-gradient hover:opacity-95 transition-opacity">
+            Voir la page {label.toLowerCase()}
+          </Link>
         </div>
       </div>
     </div>
