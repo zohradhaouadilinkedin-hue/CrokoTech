@@ -9,6 +9,7 @@ import { Label } from "../components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
 import { useToast } from "../hooks/use-toast";
 import { company, services } from "../mock";
+import ShareQR from "../components/ShareQR";
 
 const empty = { name: "", email: "", phone: "", subject: "", message: "" };
 
@@ -58,6 +59,7 @@ export default function Contact() {
               loading="lazy"
             />
           </div>
+          <ShareQR />
         </Reveal>
 
         <Reveal delay={120} className="lg:col-span-3">
